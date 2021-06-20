@@ -18,13 +18,14 @@ git checkout master
 git merge new-branch
 
 //<--Merge Pull Request in Github-->
-
-
+```
+```Git
 ### Delete Branch
+// [Optional] Need to switch to another branch before deleting current branch
+git checkout AnotherBrandName
 // delete branch locally
 git branch -d BranchName
 
 // delete branch remotely
 git push origin --delete BranchName
-
 ```
