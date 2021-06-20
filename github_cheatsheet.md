@@ -19,8 +19,8 @@ git merge new-branch
 
 //<--Merge Pull Request in Github-->
 ```
-```Git
 ### Delete Branch
+```Git
 // [Optional] Need to switch to another branch before deleting current branch
 git checkout AnotherBrandName
 // delete branch locally
