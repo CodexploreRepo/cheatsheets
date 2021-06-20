@@ -1,3 +1,14 @@
+# Git Command Cheat Sheet
+## Table of contents
+
+- [Table of contents](#table-of-contents)
+- [Branch](#branch)
+  - [Create a new branch](#create-a-new-branch)
+  - [Delete Branch](#delete-branch)
+
+
+
+
 ## Branch
 ### Create a new branch
 
@@ -29,3 +40,5 @@ git branch -d BranchName
 // delete branch remotely
 git push origin --delete BranchName
 ```
+
+[(Back to top)](#table-of-contents)
