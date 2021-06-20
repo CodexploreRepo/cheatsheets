@@ -3,6 +3,7 @@
 
 - [Table of contents](#table-of-contents)
 - [Managing remote repositories](managing-remote-repositories)
+  - [Removing a remote repository](#removing-a-remote-repository) 
 - [Branch](#branch)
   - [Create a new branch](#create-a-new-branch)
   - [Delete Branch](#delete-branch)
