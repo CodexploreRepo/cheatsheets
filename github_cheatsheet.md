@@ -2,13 +2,22 @@
 ## Table of contents
 
 - [Table of contents](#table-of-contents)
+- [Adding Access Token](#adding-access-token)
 - [Managing remote repositories](managing-remote-repositories)
   - [Removing a remote repository](#removing-a-remote-repository) 
 - [Branch](#branch)
   - [Create a new branch](#create-a-new-branch)
   - [Delete Branch](#delete-branch)
 
+## Adding Access Token
+If you're using MacOS, just simply follow these steps:
 
+- Goto: this link (settings -> developers setting -> personal access tokens).
+- Generate a new token and copy-paste it somewhere safely.
+- Now search for an App in your Mac, named Keychain Access.
+- Search for github.com (if there are multiple github logins then choose Kind: Internet password), double-click it.
+- Click on show password, then enter your mac's password and hit enter.
+- Password should be visible by now. Now, just paste the token you generated in step 2 and click Save changes.
 ## Managing remote repositories
 ### Removing a remote repository
 ```git
