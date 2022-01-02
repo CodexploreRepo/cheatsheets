@@ -10,10 +10,13 @@
   - [Delete Branch](#delete-branch)
 
 ## Adding Access Token
+<img width="723" alt="Screenshot 2022-01-02 at 16 10 29" src="https://user-images.githubusercontent.com/64508435/147871336-273983a6-e74f-4acf-a227-40a0540bb280.png">
+Link: https://github.com/settings/tokens 
+
 If you're using MacOS, just simply follow these steps:
 
 - Goto: this link (settings -> developers setting -> personal access tokens).
-- Generate a new token and copy-paste it somewhere safely.
+- Generate a new token (Need to select the permission) and copy-paste it somewhere safely.
 - Now search for an App in your Mac, named Keychain Access.
 - Search for github.com (if there are multiple github logins then choose Kind: Internet password), double-click it.
 - Click on show password, then enter your mac's password and hit enter.
