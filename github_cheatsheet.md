@@ -5,6 +5,7 @@
 - [Table of contents](#table-of-contents)
 - [Remote Repo Management](#remote-repo-management)
 - [Branch](#branch)
+- [Pull](#pull)
 - [Utils](#utils)
   - [Adding Access Token](#adding-access-token) 
 
@@ -27,6 +28,12 @@ git remote rm origin
 ## Create a new branch
 - `git branch <new-branch>`: to create a new branch locally
 - `git checkout -b <new-branch>`: to create and checkout to the new branch`
+
+# Pull
+- `pull` is to get the update from remote repo
+  - `git pull origin branch_name` to get the latest update from that branch 
+  - `git checkout origin/branch_name path_to_file` to get the pull version a certain file only 
+
 
 # Fetch a remote branch locally
 ```git
