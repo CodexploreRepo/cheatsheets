@@ -8,7 +8,7 @@
 |`touch new_file.txt`|**touch** command is for creating a file |
 |`nano file.txt` |**nano** is a text editor|
 |||
-|`~/.bashrc`| `~/`: the tilda slash refers to your home directory <br> `.bashrc` is a file|
+|`~/.bashrc`| `~`: the tilda slash refers to your home directory <br> `.bashrc` is a file|
 
 ## Nano Editor
 There is a basic menu at the bottom of the screen. The commands are:
