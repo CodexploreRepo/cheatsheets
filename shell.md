@@ -30,7 +30,21 @@
 |`~`| `~`: the tilda slash refers to your home directory <br> so for example `~/.bashrc` refer to `.bashrc` is a file in home directory|
 |`pwd`| get the path of current working directory|
 |`ls`|print the contents of the current directory|
-|`ls -l`|This gives us a bunch more information about each file or directory present.|
+
+- `ls -l`: This gives us a bunch more information about each file or directory present.
+- On Linux servers, the server needs to know two things about files:
+  - What can be done to a file: read (r), write (w), execute (x).
+  - Who can do it
+ 
+```Shell
+home:~$ ls -l /home
+drwxr-xr-x 1 ubuntu  users  4096 Jun 15  2019 missing
+```
+- First, the d at the beginning of the line tells us that missing is a directory. 
+- Then follow three groups of three characters (rwx). These indicate what permissions the owner of the file (ubuntu)
+- (xr) the owning group (users)
+- (x) public (“everyone else”)
+
 ### Using the shell
 | Command  | Description | 
 |----------|-------------|
