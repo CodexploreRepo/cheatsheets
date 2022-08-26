@@ -50,7 +50,8 @@ drwxr-xr-x 1 ubuntu  users  4096 Jun 15  2019 missing
 | Command  | Description | 
 |----------|-------------|
 |`mv <src_path> <dst_path>`| Move/rename the file<br>`mv foo.md dotfiles.md` to rename the "foo" to "dotfiles" file|
-|`cp <src_path> <dst_path>`|Copy the file|
+|`cp <src_path> <dst_path>`| Copy the file|
+|`rm [flags] [file/folder name]`|-r: recursively delete a non-empty directory and all of its contents|
 |||
 |`tar zxvf sentences.tgz -C sentences` | unzip file  **sentences.tgz** into **sentences** folder | 
 |||
