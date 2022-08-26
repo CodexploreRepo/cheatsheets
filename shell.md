@@ -46,7 +46,7 @@ drwxr-xr-x 1 ubuntu  users  4096 Jun 15  2019 missing
 - (xr) the owning group (users)
 - (x) public (“everyone else”)
 
-### Using the shell
+### Frequent Commands
 | Command  | Description | 
 |----------|-------------|
 |`tar zxvf sentences.tgz -C sentences` | unzip file  **sentences.tgz** into **sentences** folder | 
