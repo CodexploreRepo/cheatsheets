@@ -28,6 +28,7 @@
 |`.`| refers to your current directory|
 |`..`| refers to the parent of your current directory|
 |`~`| `~`: the tilda slash refers to your home directory <br> so for example `~/.bashrc` refer to `.bashrc` is a file in home directory|
+|`-`| previous path <br>`cd -` to change directory to previous path|
 |`pwd`| get the path of current working directory|
 |`ls`|print the contents of the current directory|
 
