@@ -49,6 +49,8 @@ drwxr-xr-x 1 ubuntu  users  4096 Jun 15  2019 missing
 ### Frequent Commands
 | Command  | Description | 
 |----------|-------------|
+|`mv <src_path> <dst_path>`| Move/rename the file<br>`mv foo.md dotfiles.md` to rename the "foo" to "dotfiles" file|
+|`cp <src_path> <dst_path>`|Copy the file|
 |`tar zxvf sentences.tgz -C sentences` | unzip file  **sentences.tgz** into **sentences** folder | 
 |||
 |`cat file.txt`| **cat** a program that is use to display the content of a file|
