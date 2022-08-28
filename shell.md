@@ -21,6 +21,7 @@
 |----------|-------------|
 |`echo`|A program simply prints out its arguments. <br>- If you want to provide an argument that contains spaces or other special characters (e.g., a directory named "My Photos"), you can either quote the argument with `'` or `"` , or escape just the relevant characters with `\` (`My\ Photos`).|
 |`which`|To find out which file is executed for a given program name |
+|`$()`| The `$()` syntax sends the output from one command into another command <br> For example: `docker container rm --force $(docker container ls --all --quiet)` is to send the output from the command `docker container ls --all --quiet` to the next command `docker container rm --force`|
 
 ### Navigating in the shell
 | Command  | Description | 
