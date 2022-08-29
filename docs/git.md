@@ -28,22 +28,6 @@ git remote rm origin
 ## Create a new branch
 - `git branch <new-branch>`: to create a new branch locally
 - `git checkout -b <new-branch>`: to create and checkout to the new branch`
-
-# Pull
-- `pull` is to get the update from remote repo
-  - `git pull origin branch_name` to get the latest update from that branch 
-  - `git checkout origin/branch_name path_to_file` to get the pull version a certain file only 
-
-
-# Fetch a remote branch locally
-```git
-git fetch origin <branch-name>
-git checkout <branch-name>
-
-# also can combine the 2 commands
-git fetch && git checkout <branch-name>
-```
-
 ## Merge a new branch
 ### Merge on Remote Repo
 - Need to create the Pull Request to merge into `Dev/Main` branch
@@ -64,6 +48,22 @@ git branch -D <Branch-Name> // brute-force delete the branch
 // delete branch remotely
 git push origin --delete BranchName
 ```
+# Pull
+- `pull` is to get the update from remote repo
+  - `git pull origin branch_name` to get the latest update from that branch 
+  - `git checkout origin/branch_name path_to_file` to get the pull version a certain file only 
+
+
+# Fetch 
+- How to fetch a remote branch to local repos
+```git
+git fetch origin <branch-name>
+git checkout <branch-name>
+
+# also can combine the 2 commands
+git fetch && git checkout <branch-name>
+```
+
 # Utils
 
 ## Adding Access Token
