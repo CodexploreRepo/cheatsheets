@@ -39,6 +39,9 @@ git remote rm origin
 ```git
 git fetch origin <branch-name>
 git checkout <branch-name>
+
+# also can combine the 2 commands
+git fetch && git checkout <branch-name>
 ```
 
 ## Merge a new branch
