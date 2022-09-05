@@ -73,3 +73,12 @@ There is a basic menu at the bottom of the screen. The commands are:
 - `^\` Replace (find and replace)
 - `^U` Uncut Text (paste line)
 - `^T` To Spell (spell check)
+
+## Variables
+- Set a variable via `export` command
+- Access the variable's value with `$`
+```Shell
+ # using Bash on Linux or Mac
+ export dockerId="quanngha"
+ echo $dockerId
+```
