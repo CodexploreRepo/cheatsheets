@@ -1,13 +1,37 @@
 # Git Command Cheat Sheet
 
-# Table of contents
+# SSH
+- Generate the SSH Key pairs (private key `id_rsa` and public key `id_rsa.pub`)
+  - Note: remember to key in something, say 123, in **Enter passphrase** 
 
-- [Table of contents](#table-of-contents)
-- [Remote Repo Management](#remote-repo-management)
-- [Branch](#branch)
-- [Pull](#pull)
-- [Utils](#utils)
-  - [Adding Access Token](#adding-access-token) 
+```shell
+ssh-keygen
+
+>>Generating public/private rsa key pair.
+>>Enter file in which to save the key (/Users/quannguyen/.ssh/id_rsa): /Users/quannguyen/.ssh/id_rsa_github
+```
+- Modify the `config` file in the `.ssh` folder in the home directory & add the id_rsa_github into 
+
+```Shell
+vi ~/.ssh/config
+
+Host *
+  UseKeychain yes
+  AddKeysToAgent yes
+
+#Github (default)
+  IdentityFile ~/.ssh/id_rsa_github
+```
+- Run `ssh-agent` in the background: everytime push and pull, it will remember the password and there is no need to type again and again.
+```Shell
+eval $(ssh-agent -s)
+>> Agent pid 12988
+
+# add github ssh private key to ssh agent
+ssh-add --apple-use-keychain ~/.ssh/id_rsa_github
+```
+- Copy the public key and paste into Github account using `pbcopy < ~/.ssh/id_rsa_github.pub` command
+
 
 # Remote Repo Management
 <p align="center"><img  src="https://user-images.githubusercontent.com/64508435/175200336-a8520e15-3eb8-4d63-995f-c557cb319e7a.png" width="400"/></p>
