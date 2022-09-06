@@ -107,20 +107,12 @@ drwxr-xr-x 1 ubuntu  users  4096 Jun 15  2019 missing
   - `-type f` either f means file, or d means directory
   - `-name` the name of the file that need to be searched
     - can use `iname` for not case-sensitive 
+- `find . -type f -empty` to find the empty files
 
+#### Grep
+- search the string inside your file via `grep "regex"`
+- `cat query.sql | grep "order"` 
 
-## Nano Editor
-There is a basic menu at the bottom of the screen. The commands are:
-- `^G` Get help
-- `^O` Write out the file (save)
-- `^W` Where is (find)
-- `^K` Cut Text (remove line)
-- `^J` Justify
-- `^X` Exit
-- `^R` Read (insert another file)
-- `^\` Replace (find and replace)
-- `^U` Uncut Text (paste line)
-- `^T` To Spell (spell check)
 
 ## Variables
 - Set a variable via `export` command
