@@ -2,14 +2,26 @@
 ## What is the shell?
 - Computers these days have a variety of interfaces for giving them commands; fanciful graphical user interfaces, voice interfaces, and even AR/VR are everywhere. These are great for 80% of use-cases, but they are often fundamentally restricted in what they allow you to do — you cannot press a button that isn’t there or give a voice command that hasn’t been programmed. To take full advantage of the tools your computer provides, we have to go old-school and drop down to a textual interface: The Shell.
 - In this lecture, we will focus on the **Bourne Again SHell**, or “**bash**” for short. This is one of the most widely used shells, and its syntax is similar to what you will see in many other shells. To open a shell prompt (where you can type commands), you first need a terminal. Your device probably shipped with one installed, or you can install one fairly easily.
-- `BASH`: default terminal of MacOS/Linux
-- `zSH`: good to use for local development with taking from BASH + Improvemnts.
+
+## Terminal vs Shell
+- **Terminal**: Text Input Environment (“Hardware Terminal”)
+- **Shell** (Bash or zSH): Text Input Interface (”Software”)
+  - `BASH`: default MacOS/Linux terminal uses
+  - `zSH`: good to use for local development with taking from (BASH + Improvemnts).
+<p align="center">
+<img width="550" alt="image" src="https://user-images.githubusercontent.com/64508435/188552799-5e37a32d-5a35-44e7-93a4-7a25a667c88f.png">
+</p>
 
 ```shell
+# Open the terminal of Mac, by default, 
 echo $SHELL
-/bin/bash
-
+>> /bin/bash
 ```
+### Install zSH for Mac
+- Step 1: Install [iterm](https://iterm2.com/)
+- Step 2: Install zSH via homebrew command `brew install zsh`
+- Step 3: Open iTerm terminal and change it to zSH instead of BASH via command `chsh -s /bin/zsh`
+- Step 4: 
 ## Shell Command
 - **Environment Variable** called `$PATH` that lists which directories the shell should search for programs when it is given a command
   - When we run the echo command, the shell sees that it should execute the program echo, and then searches through the :-separated list of directories in $PATH for a file by that name. When it finds it, it runs it (assuming the file is executable; more on that later).
