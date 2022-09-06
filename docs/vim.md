@@ -36,6 +36,6 @@
   - `dd` delete a line
 
 ### Cut, Copy and Patse
-
+- `p` means patse
 ## How to quit VIM editor
 - `ESC` (to back Command mode) &#8594; `:q!`
