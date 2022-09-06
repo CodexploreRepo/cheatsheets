@@ -1,7 +1,7 @@
 # Git CheatSheet
 
 # SSH on Mac for Github / Bitbucket / Gitlab
-- [Tutorial Video](https://www.youtube.com/watch?v=4nI0zHrOti4)
+- [Tutorial Video](https://www.youtube.com/watch?v=4nI0zHrOti4): Below instructions are for Github, but you can follow the same procedure for Bitbucket and Gitlab and multiple remote repos can be used within the same MacOS system.
 - Generate the SSH Key pairs (private key `id_rsa` and public key `id_rsa.pub`)
   - Note: remember to key in something, say 123, in **Enter passphrase** 
 
