@@ -18,7 +18,7 @@ echo $SHELL
 >> /bin/bash
 ```
 ### Install zSH for Mac
-- Step 1: Install [iterm](https://iterm2.com/)
+- Step 1: Install [iTerm](https://iterm2.com/)
 - Step 2: Install zSH via homebrew command `brew install zsh`
 - Step 3: Open iTerm terminal and change it to zSH instead of BASH via command `chsh -s /bin/zsh`
 - Step 4: 
