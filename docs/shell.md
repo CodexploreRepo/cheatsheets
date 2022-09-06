@@ -21,7 +21,9 @@ echo $SHELL
 - Step 1: Install [iTerm](https://iterm2.com/)
 - Step 2: Install zSH via homebrew command `brew install zsh`
 - Step 3: Open iTerm terminal and change it to zSH instead of BASH via command `chsh -s /bin/zsh`
-- Step 4: 
+- Step 4: Install **Oh My ZSH**, a framework to manage zSH configuration
+
+
 ## Shell Command
 - **Environment Variable** called `$PATH` that lists which directories the shell should search for programs when it is given a command
   - When we run the echo command, the shell sees that it should execute the program echo, and then searches through the :-separated list of directories in $PATH for a file by that name. When it finds it, it runs it (assuming the file is executable; more on that later).
