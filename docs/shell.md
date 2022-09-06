@@ -92,9 +92,21 @@ drwxr-xr-x 1 ubuntu  users  4096 Jun 15  2019 missing
 |||
 |`tar zxvf sentences.tgz -C sentences` | unzip file  **sentences.tgz** into **sentences** folder | 
 |||
+#### Opening a File
+| Command  | Description | 
+|----------|-------------|
 |`cat file.txt`| **cat** a program that is use to display the content of a file|
+|`head file.txt`| to view the first few lines of a file|
+|`tail file.txt`| to view the last few lines of a file|
 |`touch new_file.txt`|**touch** command is for creating a file |
 |`nano file.txt` |**nano** is a text editor|
+
+#### Find a file or directory
+- `find . -type f -name query.sql`
+  - to find at the current directory 
+  - `-type f` either f means file, or d means directory
+  - `-name` the name of the file that need to be searched
+    - can use `iname` for not case-sensitive 
 
 
 ## Nano Editor
