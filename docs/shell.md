@@ -18,22 +18,24 @@ echo $SHELL
 >> /bin/bash
 ```
 ### Install zSH for Mac
-- Step 1: Install [iTerm](https://iterm2.com/)
-- Step 2: Install zSH via homebrew command `brew install zsh`
-- Step 3: Open iTerm terminal and change it to zSH instead of BASH via command `chsh -s /bin/zsh`
-- Step 4: Install [Oh My ZSH](https://github.com/ohmyzsh/ohmyzsh/), a framework to manage zSH configuration, via curl command
-
+- **Step 1**: Install [iTerm](https://iterm2.com/)
+- **Step 2**: Install zSH via homebrew command `brew install zsh`
+- **Step 3**: Open iTerm terminal and change it to zSH instead of BASH via command `chsh -s /bin/zsh`
+- **Step 4**: Install [Oh My ZSH](https://github.com/ohmyzsh/ohmyzsh/), a framework to manage zSH configuration, via curl command
 ```Shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
-  - Step 4.1: add `code` for VS Code by running below command. [Reference Link](https://code.visualstudio.com/docs/setup/mac)
+- **Step 4.1**: add `code` for VS Code by running below command. [Reference Link](https://code.visualstudio.com/docs/setup/mac)
   ```Shell
   cat << EOF >> ~/.zshrc
   # Add Visual Studio Code (code)
   export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
   EOF
-```
-
+  ```
+- **Step 4.2**: Set zSH as default terminal of VSCode
+  - Go to Preference &#8594; Settings &#8594; search for Terminal &#8594; and select zSH as default interated Terminal for OSX as shown in below picture
+<p align="center">
+<img width="800" alt="Screenshot 2022-09-06 at 14 17 38" src="https://user-images.githubusercontent.com/64508435/188560568-1d37b5ae-e322-4248-8fce-6c986401e8c9.png"></p>
 
 ## Shell Command
 - **Environment Variable** called `$PATH` that lists which directories the shell should search for programs when it is given a command
