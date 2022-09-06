@@ -54,7 +54,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 | Command  | Description | 
 |----------|-------------|
 |`echo`|A program simply prints out its arguments. <br>- If you want to provide an argument that contains spaces or other special characters (e.g., a directory named "My Photos"), you can either quote the argument with `'` or `"` , or escape just the relevant characters with `\` (`My\ Photos`).|
+|`man <some_cmd>`|To check the document of the shell command, say `man rm` to read the doc of remove command|
 |`which`|To find out which file is executed for a given program name |
+|`whoami`|To check which user is logged in|
 |`$()`| The `$()` syntax sends the output from one command into another command <br> For example: `docker container rm --force $(docker container ls --all --quiet)` is to send the output from the command `docker container ls --all --quiet` to the next command `docker container rm --force`|
 
 ### Navigating in the shell
@@ -84,7 +86,8 @@ drwxr-xr-x 1 ubuntu  users  4096 Jun 15  2019 missing
 ### Frequent Commands
 | Command  | Description | 
 |----------|-------------|
-|`mv <src_path> <dst_path>`| Move/rename the file<br>`mv foo.md dotfiles.md` to rename the "foo" to "dotfiles" file|
+|`mv <src_path> <dst_path>`| Move/rename the file<br>`mv foo.md dotfiles.md` to rename the "foo" to "dotfiles" file <br> -f Attempt to remove the files without prompting for
+             confirmation|
 |`cp <src_path> <dst_path>`| Copy the file|
 |`rm [flags] [file/folder name]`|-r: recursively delete a non-empty directory and all of its contents|
 |||
