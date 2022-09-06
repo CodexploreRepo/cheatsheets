@@ -37,5 +37,15 @@
 
 ### Cut, Copy and Patse
 - `p` means patse
+
 ## How to quit VIM editor
 - `ESC` (to back Command mode) &#8594; `:q!`
+  - `!` to ignore any changes
+
+## Vim config file
+- the vim config file will be located at `~/.vimrc`
+
+```Shell
+:set number
+:syntax on
+```
