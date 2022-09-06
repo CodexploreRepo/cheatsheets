@@ -4,7 +4,7 @@
 - In this lecture, we will focus on the **Bourne Again SHell**, or “**bash**” for short. This is one of the most widely used shells, and its syntax is similar to what you will see in many other shells. To open a shell prompt (where you can type commands), you first need a terminal. Your device probably shipped with one installed, or you can install one fairly easily.
 
 ## Terminal vs Shell
-- **Terminal**: Text Input Environment (“Hardware Terminal”)
+- **Terminal**: Text Input Environment (“Hardware Terminal”) or a program wraps around the Shell
 - **Shell** (Bash or zSH): Text Input Interface (”Software”)
   - `BASH`: default MacOS/Linux terminal uses
   - `zSH`: good to use for local development with taking from (BASH + Improvemnts).
