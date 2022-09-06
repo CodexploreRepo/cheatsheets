@@ -86,8 +86,7 @@ drwxr-xr-x 1 ubuntu  users  4096 Jun 15  2019 missing
 ### Frequent Commands
 | Command  | Description | 
 |----------|-------------|
-|`mv <src_path> <dst_path>`| Move/rename the file<br>`mv foo.md dotfiles.md` to rename the "foo" to "dotfiles" file <br> -f Attempt to remove the files without prompting for
-             confirmation|
+|`mv <src_path> <dst_path>`| Move/rename the file<br>`mv foo.md dotfiles.md` to rename the "foo" to "dotfiles" file <br> -f Attempt to remove the files without prompting for confirmation|
 |`cp <src_path> <dst_path>`| Copy the file|
 |`rm [flags] [file/folder name]`|-r: recursively delete a non-empty directory and all of its contents|
 |||
