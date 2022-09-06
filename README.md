@@ -6,5 +6,6 @@
 - [Shell](./docs/shell.md)
   - [Vim editor](./docs/vim.md)
   - [iTerm shortcut](./docs/iterm_shortcut.md)
+  - [curl](./docs/curl.md)
 - [Visual Studio Code](./docs/vs_code.md)
 
