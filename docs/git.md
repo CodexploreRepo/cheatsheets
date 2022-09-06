@@ -1,6 +1,7 @@
-# Git Command Cheat Sheet
+# Git CheatSheet
 
-# SSH
+# SSH on Mac for Github / Bitbucket / Gitlab
+- [Tutorial Video](https://www.youtube.com/watch?v=4nI0zHrOti4)
 - Generate the SSH Key pairs (private key `id_rsa` and public key `id_rsa.pub`)
   - Note: remember to key in something, say 123, in **Enter passphrase** 
 
@@ -21,6 +22,9 @@ Host *
 
 #Github (default)
   IdentityFile ~/.ssh/id_rsa_github
+
+#Bitbucket (secondary)
+  IdentityFile ~/.ssh/id_rsa_bitbucket
 ```
 - Run `ssh-agent` in the background: everytime push and pull, it will remember the password and there is no need to type again and again.
 ```Shell
