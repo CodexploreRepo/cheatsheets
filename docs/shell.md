@@ -4,6 +4,12 @@
 - In this lecture, we will focus on the **Bourne Again SHell**, or “**bash**” for short. This is one of the most widely used shells, and its syntax is similar to what you will see in many other shells. To open a shell prompt (where you can type commands), you first need a terminal. Your device probably shipped with one installed, or you can install one fairly easily.
 - `BASH`: default terminal of MacOS/Linux
 - `zSH`: good to use for local development with taking from BASH + Improvemnts.
+
+```shell
+echo $SHELL
+/bin/bash
+
+```
 ## Shell Command
 - **Environment Variable** called `$PATH` that lists which directories the shell should search for programs when it is given a command
   - When we run the echo command, the shell sees that it should execute the program echo, and then searches through the :-separated list of directories in $PATH for a file by that name. When it finds it, it runs it (assuming the file is executable; more on that later).
