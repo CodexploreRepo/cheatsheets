@@ -21,7 +21,18 @@ echo $SHELL
 - Step 1: Install [iTerm](https://iterm2.com/)
 - Step 2: Install zSH via homebrew command `brew install zsh`
 - Step 3: Open iTerm terminal and change it to zSH instead of BASH via command `chsh -s /bin/zsh`
-- Step 4: Install **Oh My ZSH**, a framework to manage zSH configuration
+- Step 4: Install [Oh My ZSH](https://github.com/ohmyzsh/ohmyzsh/), a framework to manage zSH configuration, via curl command
+
+```Shell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+  - Step 4.1: add `code` for VS Code by running below command. [Reference Link](https://code.visualstudio.com/docs/setup/mac)
+  ```Shell
+  cat << EOF >> ~/.zshrc
+  # Add Visual Studio Code (code)
+  export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+  EOF
+```
 
 
 ## Shell Command
