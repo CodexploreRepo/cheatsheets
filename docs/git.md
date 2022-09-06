@@ -29,6 +29,11 @@ eval $(ssh-agent -s)
 
 # add github ssh private key to ssh agent
 ssh-add --apple-use-keychain ~/.ssh/id_rsa_github
+
+# [OPTIONAL] to view ids added into the SSH agent
+ssh-add -l
+3072 SHA256:xzLDvVc/glS1fRjST0SvLLzi41F9TtzyR9bl6QGSP5c quannguyen@Quans-MacBook-Pro.local (RSA)
+3072 SHA256:SgQx28pEKNWmnTQ0UiGTkvNq0nJL2W5/j9ahYX4Q2b0 quannguyen@Quans-MacBook-Pro.local (RSA)
 ```
 - Copy the public key and paste into Github account using `pbcopy < ~/.ssh/id_rsa_github.pub` command
 
