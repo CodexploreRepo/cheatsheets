@@ -91,7 +91,8 @@ drwxr-xr-x 1 ubuntu  users  4096 Jun 15  2019 missing
 |`rm [flags] [file/folder name]`|-r: recursively delete a non-empty directory and all of its contents|
 |||
 |`tar zxvf sentences.tgz -C sentences` | unzip file  **sentences.tgz** into **sentences** folder | 
-|||
+|`> /dev/null`|`/dev/null` is the null file, a special file that’s present in every single Linux system. <br>`> /dev/null` anything written to it is discarded.|
+
 #### Opening a File
 | Command  | Description | 
 |----------|-------------|
@@ -183,4 +184,12 @@ varun 50000
  
  # or you can simply use = sign to set a variable
  hostIP=$(ifconfig en0 | grep -e 'inet\s' | awk '{print $2}')
+```
+
+## For Loop
+```bash
+for <variable name> in <a list of items>;do <some command> $<variable name>;done;
+
+# Example
+for i in {1..5}; do curl http://localhost:8010 > /dev/null; done;
 ```
