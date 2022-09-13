@@ -106,10 +106,10 @@ drwxr-xr-x 1 ubuntu  users  4096 Jun 15  2019 missing
 - `-p` to ensure that if the parent folder is not made yet, the command will also create the parent folder
   - `mkdir -p /repos/new_folder` make the repos folder as well if it is not created yet
 #### `cat` 
-- Create a File, say `example.txt` with `cat` command
+- Create a File with `cat` command
 ```bash
 cat > example.txt 
-#Awaits input from the user, type desired text, and press CTRL+D to exit
+# a file `example.txt` is created and awaiting input from the user, type desired text, and press CTRL+D to exit
 
 ajay manager account 45000
 sunil clerk account 25000
@@ -125,6 +125,37 @@ sunil peon sales 13000
 - `cat query.sql | grep "order"` 
 - `-e` grep with a pattern
   - For example: `grep -e 'inet\s'` to grep with pattern **inet** follow by a space 
+
+#### `awk`
+- `awk`: format output lines 
+- By default, `awk` prints every line of data from the specified file
+```bash
+$ awk '{print}' employee.txt
+
+# Output
+ajay manager account 45000
+sunil clerk account 25000
+varun manager sales 50000
+```
+- Print the lines which match the given pattern.
+```bash
+$ awk '/manager/ {print}' employee.txt 
+
+# Output: awk command prints all the line which matches with the ‘manager’
+ajay manager account 45000
+varun manager sales 50000
+```
+- Splitting a Line Into Fields: 
+  - For each record i.e line, the awk command splits the record delimited by whitespace character by default and stores it in the `$n` variables. If the line has 4 words, it will be stored in `$1`, `$2`, `$3` and `$4` respectively. 
+  - Also, `$0` represents the whole line.  
+```bash
+$ awk '{print $1,$4}' employee.txt
+
+# Output: $1 and $4 represents Name and Salary fields respectively. 
+ajay 45000
+sunil 25000
+varun 50000
+```
 
 #### Find a file or directory
 - `find . -type f -name query.sql`
