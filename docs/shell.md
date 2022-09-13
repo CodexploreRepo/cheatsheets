@@ -180,4 +180,7 @@ varun 50000
  # using Bash on Linux or Mac
  export dockerId="quanngha"
  echo $dockerId
+ 
+ # or you can simply use = sign to set a variable
+ hostIP=$(ifconfig en0 | grep -e 'inet\s' | awk '{print $2}')
 ```
