@@ -100,6 +100,31 @@ drwxr-xr-x 1 ubuntu  users  4096 Jun 15  2019 missing
 |`tail file.txt`| to view the last few lines of a file|
 |`touch new_file.txt`|**touch** command is for creating a file |
 |`nano file.txt` |**nano** is a text editor|
+|`vi file.txt`|Open the file using VIM editor|
+
+#### `mkdir`
+- `-p` to ensure that if the parent folder is not made yet, the command will also create the parent folder
+  - `mkdir -p /repos/new_folder` make the repos folder as well if it is not created yet
+#### `cat` 
+- Create a File, say `example.txt` with `cat` command
+```bash
+cat > example.txt 
+#Awaits input from the user, type desired text, and press CTRL+D to exit
+
+ajay manager account 45000
+sunil clerk account 25000
+varun manager sales 50000
+amit manager account 47000
+tarun peon sales 15000
+deepak clerk sales 23000
+sunil peon sales 13000
+```
+
+#### `grep`
+- search the string inside your file via `grep "regex"`
+- `cat query.sql | grep "order"` 
+- `-e` grep with a pattern
+  - For example: `grep -e 'inet\s'` to grep with pattern **inet** follow by a space 
 
 #### Find a file or directory
 - `find . -type f -name query.sql`
@@ -109,9 +134,12 @@ drwxr-xr-x 1 ubuntu  users  4096 Jun 15  2019 missing
     - can use `iname` for not case-sensitive 
 - `find . -type f -empty` to find the empty files
 
-#### Grep
-- search the string inside your file via `grep "regex"`
-- `cat query.sql | grep "order"` 
+#### Find a IP address
+-  Find your machine's IP address: `ifconfig en0 | grep -e 'inet\s' | awk '{print $2}'`
+  - `ifconfig en0` will return the ip config corresponding to en0
+  - `grep -e 'inet\s'` will only select the row containing the inet which is `inet 192.168.0.191 netmask 0xffffff00 broadcast 192.168.0.255`
+  - `awk '{print $2}' will only print the second word from the row above which is `192.168.0.191`
+
 
 
 ## Variables
