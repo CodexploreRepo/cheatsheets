@@ -93,7 +93,7 @@ drwxr-xr-x 1 ubuntu  users  4096 Jun 15  2019 missing
 |`tar zxvf sentences.tgz -C sentences` | unzip file  **sentences.tgz** into **sentences** folder | 
 |`> /dev/null`|`/dev/null` is the null file, a special file that’s present in every single Linux system. <br>`> /dev/null` anything written to it is discarded.|
 
-#### Opening a File
+#### Read/Write a File
 | Command  | Description | 
 |----------|-------------|
 |`cat file.txt`| **cat** a program that is use to display the content of a file|
@@ -102,6 +102,15 @@ drwxr-xr-x 1 ubuntu  users  4096 Jun 15  2019 missing
 |`touch new_file.txt`|**touch** command is for creating a file |
 |`nano file.txt` |**nano** is a text editor|
 |`vi file.txt`|Open the file using VIM editor|
+|||
+|`tee`| Copy the standard input to standard output/ to a file <br>Flag `-a` append the output to the files rather than overwriting them. <br> See `tee` example in the below code snippet|
+
+- `tee` example
+  -  `echo $'\n127.0.0.1 registry.local'` is to print the string `'\n127.0.0.1 registry.local'` to the standard input
+  -  `tee` to append that string into the `hosts` file at `/etc` location
+```Shell
+echo $'\n127.0.0.1 registry.local' | sudo tee -a /etc/hosts` 
+```
 
 #### `mkdir`
 - `-p` to ensure that if the parent folder is not made yet, the command will also create the parent folder
