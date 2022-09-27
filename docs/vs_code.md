@@ -1,4 +1,16 @@
 # Vscode
+
+### `settings.json`
+- `"python.terminal.activateEnvironment": true` to automatically activate the environment in Python
+```json
+{
+  "editor.formatOnSave": true,
+  "python.formatting.provider": "black",
+  # add the terminal activated
+  "python.terminal.activateEnvironment": true,
+
+}
+```
 ### 2022-22-04
 - `ModuleNotFoundError: No module named` for sub-module creation in VS code
   - Solution: [Marking a directory as sources root equivalent in Visual Studio Code for Python](https://www.qualityology.com/tech/marking-a-folder-as-sources-root-equivalent-in-visual-studio-code-for-python/)
