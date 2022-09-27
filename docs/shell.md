@@ -181,6 +181,17 @@ varun 50000
   - `grep -e 'inet\s'` will only select the row containing the inet which is `inet 192.168.0.191 netmask 0xffffff00 broadcast 192.168.0.255`
   - `awk '{print $2}' will only print the second word from the row above which is `192.168.0.191`
 
+## Terminal Shortcut
+- In `.zshrc` or `.bashrc` file, we can add **alias** 
+
+```Shell
+# Inside .bashrc or .zshrc file
+# DEVELOPMENT
+alias gs='git status'
+alias activate='./venv/bin/activate'
+
+## Kubernetes
+```
 
 
 ## Variables
