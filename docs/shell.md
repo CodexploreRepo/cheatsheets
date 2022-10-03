@@ -213,3 +213,15 @@ for <variable name> in <a list of items>;do <some command> $<variable name>;done
 # Example
 for i in {1..5}; do curl http://localhost:8010 > /dev/null; done;
 ```
+
+## `Base64` Encoding
+
+```bash
+# encode the word 'usename' as base64-format
+➜  echo -n 'username' | base64
+dXNlcm5hbWU=
+# encode the word 'password' as base64-format
+➜  echo -n 'password' | base64
+cGFzc3dvcmQ=
+
+```
