@@ -97,6 +97,14 @@ git checkout <branch-name>
 git fetch && git checkout <branch-name>
 ```
 
+# Log
+```git
+git log 
+git log --oneline
+git log --oneline --graph --decorate # display Git commit history
+
+git diff <commitID1> <commitID2>     # show diff between two commits
+```
 # Utils
 
 ## Adding Access Token
