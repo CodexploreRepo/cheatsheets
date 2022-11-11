@@ -1,5 +1,5 @@
 # Utils Cheatsheet
-
+- [Weekly Knowledge](./docs/weekly_knowledge.md)
 - [Git](./docs/git.md)
 - [Markdown](./docs/markdown.md)
 - [Readme Template](./docs/readme_template.md)
