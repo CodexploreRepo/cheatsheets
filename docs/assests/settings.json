@@ -1,0 +1,23 @@
+{
+  "window.zoomLevel": 1,
+  "workbench.colorTheme": "GitHub Dark Default",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontSize": 14,
+  "editor.rulers": [80, 88],
+  "editor.wordWrap": "on",
+  "editor.formatOnSave": true,
+  // Default Code Formatter: Prettier
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // Python Code Formatter Settings
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "black-formatter.args": ["--line-length=80"],
+  "isort.args": ["--profile", "black"],
+  // Terminal settings:
+  "python.terminal.activateEnvironment": true,
+  "editor.tabSize": 2
+}
