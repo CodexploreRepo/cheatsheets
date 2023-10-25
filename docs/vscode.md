@@ -40,3 +40,11 @@
 
 - Change the function name: Right Click &#8594; **“Find All References”** &#8594; **"Rename Symbol"**
 - **Peek**: can view the definition & modify the function
+
+## Error
+### VS Code Extension
+- Error while installing VS Code extension: `"[error] end of central directory record signature not found,end of central directory record signature not found: Error: end of central directory record signature not found,end of central directory record signature not found"`
+  - Root Cause: there might be an error, some part of the installation file while downloading the extension and store in cache extension folders
+  - Solution: by deleting the following cache extension/data folders from this link https://github.com/PowerShell/vscode-powershell/issues/4474 
+    - `C:\Users\UserName\AppData\Roaming\Code\CachedExtensionVSIXs`
+    - `C:\Users\UserName\AppData\Roaming\Code\CachedData` 
