@@ -1,18 +1,17 @@
 # VSCode
-
 ## Shortcut
-
 - Command Palette: `CMD + SHIFT + P`
 - Select Multiple Lines: `Option + CMD + Down Key` &#8594; ESC to exit the multiple lines
 
 ## Setup
-
 - Code path:  Open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the **Shell Command: Install 'code' command in PATH command**.
 - Extensions:
   - Theme: search **"GitHub Theme"**
     - Change theme: Command Palette &#8594; type "Theme"
   - Icon Them: **"Material icon theme"**
   - Python: Python, Pylance, Jupyter, Flake8, Black, iSort
+  - Install Vscode using `.vsix` file, a package format used for Visual Studio Code (VS Code) extensions.
+    - You can download the `.vsix` file from the VS Code Extension Official Website &#8594; Go to VS Code &#8594; Extension Tab &#8594; Choose "Install from VSIX" and browse to the downloaded `.vsix` file 
 - Settings: UI & JSON
 
   - UI:
