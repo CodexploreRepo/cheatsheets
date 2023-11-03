@@ -19,5 +19,8 @@
   "isort.args": ["--profile", "black"],
   // Terminal settings:
   "python.terminal.activateEnvironment": true,
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.variableTypes": true
 }
