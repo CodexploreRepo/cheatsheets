@@ -285,4 +285,4 @@ chmod 600 id_rsa.pem # give READ WRITE access to the owner
 - `scp -i /location_in_machine_A/to/private/key -v -P 64022 file_path machineB@ip_address:/path/to/store/inB/`
   - `-i` Identity
   - `-v` verbose to debug
-  - `-P` port    
+  - `-P` port (note P should be in captital letter)   
