@@ -15,5 +15,7 @@ Telnet is a network protocol and a command-line tool that allows you to remotely
 
 ### Shell
 
+- `ls -ltr`: This will display a detailed list of files and directories in the current directory, sorted by modification time, with the oldest entries listed first.
 - `printenv` to print all the environment variables
 - `echo $PATH` to print all the paths
+- `unzip file.zip -d directory_path` to unzip a file

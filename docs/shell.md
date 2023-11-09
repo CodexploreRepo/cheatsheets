@@ -83,6 +83,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 | `ls`    | print the contents of the current directory                                                                                       |
 
 - `ls -l`: This gives us a bunch more information about each file or directory present.
+- `ls -ltr`: This will display a detailed list of files and directories in the current directory, sorted by modification time, with the oldest entries listed first.
 - On Linux servers, the server needs to know two things about files:
   - What can be done to a file: read (r), write (w), execute (x).
   - Who can do it
@@ -249,6 +250,8 @@ for i in {1..5}; do curl http://localhost:8010 > /dev/null; done;
 
 ## `Base64` Encoding
 
+- Encoding Username & Password
+
 ```bash
 # encode the word 'usename' as base64-format
 ➜  echo -n 'username' | base64
@@ -256,5 +259,22 @@ dXNlcm5hbWU=
 # encode the word 'password' as base64-format
 ➜  echo -n 'password' | base64
 cGFzc3dvcmQ=
+```
 
+- Encoding & Decoding the secrect binary file (e.g. private key)
+  - Encoding: The output of below command can be stored in the secrect manager, so later we can load into the docker file as the environmental variable
+
+```bash
+# encode
+# -w 0 option specifies that the output lines should not be wrapped. It means that the base64-encoded output will be in a `single line`, without line breaks.
+cat id_rsa | base64 -w 0
+```
+
+- Decoding:
+  - This is to decode the encoded base64 string into the binary output
+
+```bash
+# Decoding
+echo $ENCODED_BASE64_STRING | base64 -d > id_rsa.pem
+chmod 600 id_rsa.pem # give READ WRITE access to the owner
 ```
