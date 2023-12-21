@@ -19,6 +19,7 @@
 # Open the terminal of Mac, by default,
 echo $SHELL
 >> /bin/bash
+>> /bin/zsh
 ```
 
 ### Install zSH for Mac
@@ -46,9 +47,12 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 ## Shell Command
 
-- **Environment Variable** called `$PATH` that lists which directories the shell should search for programs when it is given a command
+### Environment Variable `$PATH`
 
-  - When we run the echo command, the shell sees that it should execute the program echo, and then searches through the :-separated list of directories in $PATH for a file by that name. When it finds it, it runs it (assuming the file is executable; more on that later).
+- **Environment Variable** `$PATH`: lists which directories the shell should search for programs when it is given a command
+
+  - When we run the echo command, the shell sees that it should execute the program `echo`, and then searches through the **:**-separated list of directories in $PATH for a file by that name. When it finds it, it runs it (assuming the file is executable; more on that later).
+    - For example, when type `echo`, the shell will search and find the `echo` executable in the directory `/bin`
 
   ```shell
   home:~$ echo $PATH
@@ -61,15 +65,31 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
   /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
   ```
 
+- **Login shell** is the first process that executes under your user ID when you log in for an interactive session.
+  - Login shells typically read a file that does things like setting environment variables:
+    - `/etc/profile` and `~/.profile` for the traditional Bourne shell
+    - `~/.bash_profile` additionally for **Bash**
+    - `/etc/zprofile` and `~/.zprofile` for **zsh**
+- `$PATH` normally contains something when `~/.profile` is sourced (by default it contains `/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games`)
+  - Latest Mac OS versions the default shell is **zsh**, simply added new entries to the $PATH by editing ~/.zshrc the following way
+    - `:$PATH` is put at the end of the value to be added to PATH, so that PATH ends up containing both the newly assigned path & existing paths where the newly assigned path will be put at first
+
+```Shell
+export PATH=/path/available/only/for/zsh/shells:$PATH
+
+# /path/available/only/for/zsh/shells:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games`
+```
+
 ### Using the shell
 
-| Command          | Description                                                                                                                                                                                                                                                                                     |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `echo`           | A program simply prints out its arguments. <br>- If you want to provide an argument that contains spaces or other special characters (e.g., a directory named "My Photos"), you can either quote the argument with `'` or `"` , or escape just the relevant characters with `\` (`My\ Photos`). |
-| `man <some_cmd>` | To check the document of the shell command, say `man rm` to read the doc of remove command                                                                                                                                                                                                      |
-| `which`          | To find out which file is executed for a given program name                                                                                                                                                                                                                                     |
-| `whoami`         | To check which user is logged in                                                                                                                                                                                                                                                                |
-| `$()`            | The `$()` syntax sends the output from one command into another command <br> For example: `docker container rm --force $(docker container ls --all --quiet)` is to send the output from the command `docker container ls --all --quiet` to the next command `docker container rm --force`       |
+| Command           | Description                                                                                                                                                                                                                                                                                     |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `echo`            | A program simply prints out its arguments. <br>- If you want to provide an argument that contains spaces or other special characters (e.g., a directory named "My Photos"), you can either quote the argument with `'` or `"` , or escape just the relevant characters with `\` (`My\ Photos`). |
+| `man <some_cmd>`  | To check the document of the shell command, say `man rm` to read the doc of remove command                                                                                                                                                                                                      |
+| `source ~/.zshrc` | reload changes in your current shell environment.                                                                                                                                                                                                                                               |
+| `which`           | To find out which file is executed for a given program name                                                                                                                                                                                                                                     |
+| `whoami`          | To check which user is logged in                                                                                                                                                                                                                                                                |
+| `$()`             | The `$()` syntax sends the output from one command into another command <br> For example: `docker container rm --force $(docker container ls --all --quiet)` is to send the output from the command `docker container ls --all --quiet` to the next command `docker container rm --force`       |
 
 ### Navigating in the shell
 
