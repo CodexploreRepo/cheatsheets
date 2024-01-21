@@ -1,5 +1,7 @@
 # MacOS
 
+- View CPU & GPU History: Activity Monitor
+  - Press `CMD + 3` to open CPU history & `CMD + 4` to open GPU history
 - Swap Memory: share RAM & SSD
 - View GPU: System Information > Graphics
   - GPU Metal 3
