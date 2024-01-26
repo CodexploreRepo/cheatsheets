@@ -1,5 +1,17 @@
 # Daily Knowledge
 
+## Day 3
+
+### Git
+
+- Check the remote origin:
+
+```shell
+git remote -v
+# origin  https://github.com/CodexploreRepo/jenkins.git (fetch)
+# origin  https://github.com/CodexploreRepo/jenkins.git (push)
+```
+
 ## Day 2
 
 ### Linux (Shell)
