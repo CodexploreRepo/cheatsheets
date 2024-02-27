@@ -4,6 +4,13 @@
 
 ### Git
 
+- How to stop tracking a file but still keep in the local repo: `git rm *.csv --cached`
+
+  - `cached` option removes the file from the index but keeps it in the working directory
+  - From the above example, this is to remove all `.csv` file from being tracked by Git
+  - `git rm *.csv` without `cached` option: will remove the file permanently
+  - Once done, need to commit & push the changes to the remote repo
+
 - Check the remote origin:
 
 ```shell
@@ -11,6 +18,44 @@ git remote -v
 # origin  https://github.com/CodexploreRepo/jenkins.git (fetch)
 # origin  https://github.com/CodexploreRepo/jenkins.git (push)
 ```
+
+- Delete Branch
+  - Need to switch to another branch before deleting current branch
+
+```git
+git checkout <AnotherBrandName>
+git branch -d <Branch-Name> // delete branch locally
+git branch -D <Branch-Name> // brute-force delete the branch
+
+// delete branch remotely
+git push origin --delete BranchName
+```
+
+- Merge multiple commits to a single one
+
+  - For example, merge commit from commit A to D, not include commit A
+
+  ```git
+  git rebase -i A
+  # rebase commit A..D into E (3 commands)
+  # change from
+  pick B
+  pick C
+  pick D
+  # to
+  pick B
+  fixup C
+  fixup D
+  ```
+
+  - Once rebased, you need to force `-f` push
+
+  ```git
+  git push -f origin branch_name
+  ```
+
+- Modify commit message: `git commid --amend` and then update the commit message
+  - Once done, you need to force `-f` push `git push -f origin branch_name`
 
 ## Day 2
 

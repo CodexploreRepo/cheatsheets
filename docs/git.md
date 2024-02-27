@@ -138,6 +138,39 @@ git log --oneline --graph --decorate # display Git commit history
 git diff <commitID1> <commitID2>     # show diff between two commits
 ```
 
+## Rebase
+
+### Merge multiple commits to a single one
+
+- For example, merge commit from commit A to D, not include commit A
+
+```git
+git rebase -i A
+# rebase commit A..D into E (3 commands)
+# change from
+pick B
+pick C
+pick D
+# to
+pick B
+fixup C
+fixup D
+```
+
+- Once rebased, you need to force `-f` push
+
+```git
+git push  -f origin branch_name
+```
+
+## Remove
+
+- How to stop tracking a file but still keep in the local repo: `git rm *.csv --cached`
+  - `cached` option removes the file from the index but keeps it in the working directory
+  - From the above example, this is to remove all `.csv` file from being tracked by Git
+- `git rm *.csv` without `cached` option: will remove the file permanently
+- Once done, need to commit & push the changes to the remote repo
+
 ## Utils
 
 ### Adding Access Token
