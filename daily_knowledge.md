@@ -1,5 +1,18 @@
 # Daily Knowledge
 
+## Day 4
+
+### Linux (Shell)
+
+- Persist the environment variables in the terminal
+  - If we set `export KUBECONFIG=~/.kube/config-prod` in the terminal, if we close it, the variable `KUBECONFIG` will be removed.
+  - So in order to persist the environment variables, you can set inside the `.zshrc` if using zsh shell or `.bashrc` if using Bash shell.
+
+```Shell
+alias k=kubectl # you can set the alias
+export KUBECONFIG=~/.kube/config-prod
+```
+
 ## Day 3
 
 ### Git
