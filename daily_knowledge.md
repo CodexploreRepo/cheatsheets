@@ -17,6 +17,11 @@
 
 ### Linux (Shell)
 
+- `eval` function used to execute arguments as a shell command
+  - Example 1: `cd_var ="cd Desktop"; eval $cd_var` this `eval` function will execute the content inside the `cd_var`
+  - Example 2: `eval $(ssh-agent -s)` you can directly call the function inside the `eval $()` if you want the process created from that function is perfoming in the same current shell rather than starting a new sub-shell.
+    - When you call `ssh-agent -s` directly, it starts a new subshell to run the `ssh-agent` process. Any environment variables set within this subshell are isolated and not accessible in the parent shell session.
+    - By using eval `$(ssh-agent -s)`, the `ssh-agent` process is started in the current shell session, and the environment variables are set directly in the parent shell, making them accessible and effective throughout the shell session.
 - Persist the environment variables in the terminal
   - If we set `export KUBECONFIG=~/.kube/config-prod` in the terminal, if we close it, the variable `KUBECONFIG` will be removed.
   - So in order to persist the environment variables, you can set inside the `.zshrc` if using zsh shell or `.bashrc` if using Bash shell.
