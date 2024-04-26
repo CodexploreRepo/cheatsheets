@@ -1,41 +1,53 @@
 # Git CheatSheet
 
-## SSH on Mac for Github / Bitbucket / Gitlab
+## SSH setup on Mac for Github / Bitbucket / Gitlab
 
 - [Tutorial Video](https://www.youtube.com/watch?v=4nI0zHrOti4): Below instructions are for Github, but you can follow the same procedure for Bitbucket and Gitlab and multiple remote repos can be used within the same MacOS system.
 - Generate the SSH Key pairs (private key `id_rsa` and public key `id_rsa.pub`)
-  - Note: remember to key in something, say 123, in **Enter passphrase**
+  - [Optional]: remember to key in something, say 123, in **Enter passphrase** for the password
 
 ```shell
-ssh-keygen
+# option 1: using ed25519
+ssh-keygen -t ed25519 -C "your_email@example.com"
+# option 2: if you are using a legacy system that doesn't support the Ed25519 algorithm, use:
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
 
+- This creates a new SSH key, using the provided email as a label.
+
+```shell
 >>Generating public/private rsa key pair.
 >>Enter file in which to save the key (/Users/quannguyen/.ssh/id_rsa): /Users/quannguyen/.ssh/id_rsa_github
 ```
 
-- Modify the `config` file in the `.ssh` folder in the home directory & add the id_rsa_github into
+- Modify the `config` file in the `.ssh` folder in the home directory & add the id_rsa_github into by using command:
+
+```shell
+vi ~/.ssh/config
+# If the config does not exists, then using follow command to create: toch ~/.ssh/config
+```
 
 ```Shell
-vi ~/.ssh/config
-
+# inside the ~/.ssh/config
 Host *
   UseKeychain yes
   AddKeysToAgent yes
 
-#Github (default)
+  # Github (default)
   IdentityFile ~/.ssh/id_rsa_github
 
-#Bitbucket (secondary)
+  # Bitbucket (secondary)
   IdentityFile ~/.ssh/id_rsa_bitbucket
 ```
 
 - Run `ssh-agent` in the background: everytime push and pull, it will remember the password and there is no need to type again and again.
 
 ```Shell
+# run the ssh-agent in the background
 eval $(ssh-agent -s)
->> Agent pid 12988
+# >> Agent pid 12988
 
-# add github ssh private key to ssh agent
+# add github ssh private key to ssh agent &  store your passphrase in the keychain.
 ssh-add --apple-use-keychain ~/.ssh/id_rsa_github
 
 # [OPTIONAL] to view ids added into the SSH agent
@@ -163,28 +175,24 @@ fixup D
 git push  -f origin branch_name
 ```
 
-## Remove
+## Frequently Used Commands
 
-- How to stop tracking a file but still keep in the local repo: `git rm *.csv --cached`
-  - `cached` option removes the file from the index but keeps it in the working directory
-  - From the above example, this is to remove all `.csv` file from being tracked by Git
-- `git rm *.csv` without `cached` option: will remove the file permanently
-- Once done, need to commit & push the changes to the remote repo
-
-## Utils
-
-### Adding Access Token
-
-<img width="723" alt="Screenshot 2022-01-02 at 16 10 29" src="https://user-images.githubusercontent.com/64508435/147871336-273983a6-e74f-4acf-a227-40a0540bb280.png">
-Link: https://github.com/settings/tokens
-
-If you're using MacOS, just simply follow these steps:
-
-- Goto: this link (settings -> developers setting -> personal access tokens).
-- Generate a new token (Need to select the permission) and copy-paste it somewhere safely.
-- Now search for an App in your Mac, named Keychain Access.
-- Search for github.com (if there are multiple github logins then choose Kind: Internet password), double-click it.
-- Click on show password, then enter your mac's password and hit enter.
-- Password should be visible by now. Now, just paste the token you generated in step 2 and click Save changes.
-
-[(Back to top)](#table-of-contents)
+- How to view the git log: `git log --oneline --graph --decorate`
+- How to unstage files & removing the most recent `n` commit with `git reset`:
+  - There are different modes of reset:
+    - `--soft` **un-commit** changes, changes are left staged (index).
+    - `--mixed` (default mode): **un-commit** + **un-stage** changes, changes are left in working tree.
+    - `--hard` **un-commit** + **un-stage** + **delete** changes
+  - Example 1 (default mode): `git reset HEAD~3`
+    - This is `--mixed` mode meaning the current branch's HEAD pointer will be moved back `n=3` commits in history, un-doing the last 3 commits on the branch.
+    - The changes from the un-done commits will be moved back to the staging area (**un-stage**), and the working directory will remain un-changed, allowing you to re-commit or modify them as needed.
+- How to stop tracking a file in local repo:
+  - `git rm *.csv --cached` stop tracking a file but still keep in the local repo
+    - `cached` option removes the file from the index but keeps it in the working directory
+    - From the above example, this is to remove all `.csv` file from being tracked by Git
+  - `git rm *.csv` without `cached` option: will remove the file permanently
+  - Once done, need to commit & push the changes to the remote repo
+- How to compare file:
+  - `git diff <commitID1> <commitID2>` show diff between two commits
+  - `git diff file_name` view the change in the file
+    [(Back to top)](#table-of-contents)

@@ -2,6 +2,19 @@
 
 ## Day 4
 
+### Git
+
+#### `git reset`
+
+- How to unstage files & removing the most recent `n` commit with `git reset`:
+- There are different modes of reset:
+  - `--soft` **un-commit** changes, changes are left staged (index).
+  - `--mixed` (default mode): **un-commit** + **un-stage** changes, changes are left in working tree.
+  - `--hard` **un-commit** + **un-stage** + **delete** changes
+- Example 1 (default mode): `git reset HEAD~3`
+  - This is `--mixed` mode meaning the current branch's HEAD pointer will be moved back `n=3` commits in history, un-doing the last 3 commits on the branch.
+  - The changes from the un-done commits will be moved back to the staging area (**un-stage**), and the working directory will remain un-changed, allowing you to re-commit or modify them as needed.
+
 ### Linux (Shell)
 
 - Persist the environment variables in the terminal
